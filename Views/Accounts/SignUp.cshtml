@@ -1,0 +1,143 @@
+﻿@model RolesSignUpViewModel
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+
+
+@*<form asp-controller="Accounts" asp-action="SignUp" method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-2">
+                    <label asp-for="@Model.SignUpRoles.UserName" class="form-label"></label>
+                    <input type="text" asp-for="@Model.SignUpRoles.UserName" class="form-control" />
+                    <span asp-validation-for="@Model.SignUpRoles.UserName"></span>
+                </div>
+                <div class="mb-2">
+                    <label asp-for="@Model.SignUpRoles.FullName" class="form-label"></label>
+                    <input type="text" asp-for="@Model.SignUpRoles.FullName" class="form-control" />
+                    <span asp-validation-for="@Model.SignUpRoles.FullName"></span>
+                </div>
+
+                <div class="mb-2">
+                    <label asp-for="@Model.SignUpRoles.Email" class="form-label"></label>
+                    <input type="text" asp-for="@Model.SignUpRoles.Email" class="form-control" />
+                    <span asp-validation-for="@Model.SignUpRoles.Email"></span>
+                </div>
+                <div class="mb-2">
+                    <label asp-for="@Model.SignUpRoles.Password" class="form-label"></label>
+                    <input type="text" asp-for="@Model.SignUpRoles.Password" class="form-control" />
+                    <span asp-validation-for="@Model.SignUpRoles.Password"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SelectedValue"></label>
+                    <select name="selectedValue" asp-for="SelectedValue" asp-items="Model.Values"></select>
+                </div>
+                <div class="mb-2">
+                    <label asp-for="@Model.SignUpRoles.ConfirmPassword" class="form-label"></label>
+                    <input type="text" asp-for="@Model.SignUpRoles.ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="@Model.SignUpRoles.ConfirmPassword"></span>
+                </div>
+                <div class="mb-2">
+                    <label asp-for="@Model.SignUpRoles.PhoneNumber" class="form-label"></label>
+                    <input type="text" asp-for="@Model.SignUpRoles.PhoneNumber" class="form-control" />
+                    <span asp-validation-for="@Model.SignUpRoles.PhoneNumber"></span>
+                </div>
+                <div class="mt-2 d-grid">
+                    <input type="submit" class="btn btn-primary" value="Register" />
+                </div>
+            </div>
+        </div>
+    </form>*@
+
+
+@*--------------------------------------------------------------------------------------------------------------------------------------------*@
+
+
+
+
+<h1 class="text-center">Create an Account</h1>
+
+
+<style>
+
+    #container {
+        background-image: url(https://cdn.dribbble.com/users/1206715/screenshots/6480410/home_key_logo.jpg);
+        background-position: center;
+        width: 700px;
+        height: 400px;
+    }
+</style>
+
+    
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-2">
+            <div class="row ">
+                @*<div class="col-md-5 align-content-xxl-start offset-0">
+                    <img src="https://cdn.dribbble.com/users/1206715/screenshots/6480410/home_key_logo.jpg" width="400" height="545" class="border border rounded" />
+                </div>*@
+                <div class="col-md-5 align-content-xl-end border border-dark shadow-lg rounded pl-5 pr-5 pb-3 offset-2 back-image">
+                    <form asp-controller="Accounts" asp-asp-action="Login" method="post">
+                        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+                        <div class="mb-2">
+                            <label asp-for="@Model.SignUpRoles.UserName" class="form-label"></label>
+                            <input type="text" asp-for="@Model.SignUpRoles.UserName" class="form-control" placeholder="Enter User Name" />
+                            <span asp-validation-for="@Model.SignUpRoles.UserName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-2">
+                            <label asp-for="@Model.SignUpRoles.FullName" class="form-label"></label>
+                            <input type="text" asp-for="@Model.SignUpRoles.FullName" class="form-control" placeholder="Enter Full Name" />
+                            <span asp-validation-for="@Model.SignUpRoles.FullName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-2">
+                            <label asp-for="@Model.SignUpRoles.Email" class="form-label"></label>
+                            <input type="text" asp-for="@Model.SignUpRoles.Email" class="form-control" placeholder="Enter Your Email" />
+                            <span asp-validation-for="@Model.SignUpRoles.Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-2">
+                            <label asp-for="@Model.SignUpRoles.Password" class="form-label"></label>
+                            <input type="text" asp-for="@Model.SignUpRoles.Password" class="form-control" placeholder="Enter Password" />
+                            <span asp-validation-for="@Model.SignUpRoles.Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <label asp-for="SelectedValue" class="about-inner"></label>
+                            <select name="select" asp-for="SelectedValue" asp-items="Model.Values"></select>
+                        </div>
+
+
+
+                        
+
+                        <div class="mb-2">
+                            <label asp-for="@Model.SignUpRoles.ConfirmPassword" class="form-label"></label>
+                            <input type="text" asp-for="@Model.SignUpRoles.ConfirmPassword" class="form-control" placeholder="Enter Confirm Password" />
+                            <span asp-validation-for="@Model.SignUpRoles.ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-2">
+                            <label asp-for="@Model.SignUpRoles.PhoneNumber" class="form-label"></label>
+                            <input type="text" asp-for="@Model.SignUpRoles.PhoneNumber" class="form-control" placeholder="Enter phone Number " />
+                            <span asp-validation-for="@Model.SignUpRoles.PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-outline-success float-right" value="Register" />
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
